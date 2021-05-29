@@ -102,10 +102,13 @@ window.onload = wrap_img;
   <li>停止中のコンテナやdanglingなイメージなど不要なリソースを全て削除します。
     <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker system prune
 </code></pre></div>    </div>
-    <hr />
-    <h2 id="dockerイメージ用コマンド"><strong>Dockerイメージ用コマンド</strong></h2>
-    <h3 id="docker-buildでdockerイメージを作成"><strong>docker buildでDockerイメージを作成</strong></h3>
   </li>
+</ul>
+
+<hr />
+<h2 id="dockerイメージ用コマンド"><strong>Dockerイメージ用コマンド</strong></h2>
+<h3 id="docker-buildでdockerイメージを作成"><strong>docker buildでDockerイメージを作成</strong></h3>
+<ul>
   <li>現在のディレクトリにあるDockerfileという名前のDockerfileからfooというコンテナのイメージを作成します。
     <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build <span class="nt">-t</span> foo <span class="nb">.</span>
 </code></pre></div>    </div>
