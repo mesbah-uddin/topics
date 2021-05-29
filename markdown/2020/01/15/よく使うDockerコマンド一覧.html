@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Dockerコマンドたち | Topics</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Dockerコマンドたち" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="よく使うDockerコマンド一覧" />
+<meta property="og:description" content="よく使うDockerコマンド一覧" />
+<link rel="canonical" href="https://mesbah-uddin.github.io/topics/markdown/2020/01/15/%E3%82%88%E3%81%8F%E4%BD%BF%E3%81%86Docker%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E4%B8%80%E8%A6%A7.html" />
+<meta property="og:url" content="https://mesbah-uddin.github.io/topics/markdown/2020/01/15/%E3%82%88%E3%81%8F%E4%BD%BF%E3%81%86Docker%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E4%B8%80%E8%A6%A7.html" />
+<meta property="og:site_name" content="Topics" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-01-15T00:00:00-06:00" />
+<script type="application/ld+json">
+{"description":"よく使うDockerコマンド一覧","url":"https://mesbah-uddin.github.io/topics/markdown/2020/01/15/%E3%82%88%E3%81%8F%E4%BD%BF%E3%81%86Docker%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E4%B8%80%E8%A6%A7.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://mesbah-uddin.github.io/topics/markdown/2020/01/15/%E3%82%88%E3%81%8F%E4%BD%BF%E3%81%86Docker%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E4%B8%80%E8%A6%A7.html"},"headline":"Dockerコマンドたち","dateModified":"2020-01-15T00:00:00-06:00","datePublished":"2020-01-15T00:00:00-06:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/topics/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://mesbah-uddin.github.io/topics/feed.xml" title="Topics" /><link rel="shortcut icon" type="image/x-icon" href="/topics/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/topics/">Topics</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/topics/about/">About Me</a><a class="page-link" href="/topics/search/">Search</a><a class="page-link" href="/topics/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Dockerコマンドたち</h1><p class="page-description">よく使うDockerコマンド一覧</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-01-15T00:00:00-06:00" itemprop="datePublished">
+        Jan 15, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/topics/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#よく使うdockerコマンド一覧">よく使うDockerコマンド一覧</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#docker本体">Docker本体</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#不要なリソースを全て削除">不要なリソースを全て削除</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#docker-system-prune">docker system prune</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#dockerイメージ">Dockerイメージ</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#dockerイメージの作成docker-build">Dockerイメージの作成：docker build</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#docker-build--t-foo-">docker build -t foo .</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#dockerイメージの一覧を表示docker-images">Dockerイメージの一覧を表示：docker images</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#docker-images">docker images</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#dockerイメージを削除docker-rmi">Dockerイメージを削除：docker rmi</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#docker-rmi-foo">docker rmi foo</a></li>
+<li class="toc-entry toc-h4"><a href="#docker-rmi-docker-images--f-danglingtrue--q">docker rmi $(docker images -f “dangling=true” -q)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#dockerコンテナ">Dockerコンテナ</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#コンテナの作成実行docker-run">コンテナの作成・実行：docker run</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#docker-run-ubuntu-bindate">docker run ubuntu /bin/date`</a></li>
+<li class="toc-entry toc-h4"><a href="#docker-run--d-nginx">docker run -d nginx</a></li>
+<li class="toc-entry toc-h4"><a href="#docker-run--d-nginxstable">docker run -d nginx:stable</a></li>
+<li class="toc-entry toc-h4"><a href="#docker-run--d---name-foo-nginx">docker run -d --name foo nginx</a></li>
+<li class="toc-entry toc-h4"><a href="#docker-run--d--p-808080-name-web-nginxstable">docker run -d -p 8080:80 –name web nginx:stable`</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#稼働中のコンテナでコマンド実行docker-exec">稼働中のコンテナでコマンド実行：docker exec</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#docker-exec-web-binls">docker exec web /bin/ls</a></li>
+<li class="toc-entry toc-h4"><a href="#docker-exec--it-web-binbash">docker exec -it web /bin/bash</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#ログの取得docker-logs">ログの取得：docker logs</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#docker-logs-web">docker logs web</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#稼働中のコンテナ一覧を表示docker-ps">稼働中のコンテナ一覧を表示：docker ps</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#docker-ps">docker ps</a></li>
+<li class="toc-entry toc-h4"><a href="#docker-ps--a">docker ps -a</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#稼働中のコンテナを停止docker-stop">稼働中のコンテナを停止：docker stop</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#docker-stop-web">docker stop web</a></li>
+<li class="toc-entry toc-h4"><a href="#docker-stop-docker-ps--q">docker stop $(docker ps -q)</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#停止中のコンテナを開始docker-start">停止中のコンテナを開始：docker start</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#docker-start-web">docker start web</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#稼働中のコンテナを再開">稼働中のコンテナを再開</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#docker-restart-web">docker restart web</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#停止中のコンテナを削除docker-rm">停止中のコンテナを削除：docker rm</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#docker-rm-web">docker rm web</a></li>
+<li class="toc-entry toc-h4"><a href="#docker-rm-docker-ps--aq">docker rm $(docker ps -aq)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><h1 id="よく使うdockerコマンド一覧">
+<a class="anchor" href="#%E3%82%88%E3%81%8F%E4%BD%BF%E3%81%86docker%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E4%B8%80%E8%A6%A7" aria-hidden="true"><span class="octicon octicon-link"></span></a>よく使うDockerコマンド一覧</h1>
+<p>ここでは、よく使うDockerコマンド一をご紹介します。詳細については、<a href="https://docs.docker.jp/engine/reference/commandline/toc.html">コマンドライン・リファレンス</a>などでご確認ください。</p>
+
+<hr>
+<h2 id="docker本体">
+<a class="anchor" href="#docker%E6%9C%AC%E4%BD%93" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Docker本体</strong>
+</h2>
+<h3 id="不要なリソースを全て削除">
+<a class="anchor" href="#%E4%B8%8D%E8%A6%81%E3%81%AA%E3%83%AA%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%92%E5%85%A8%E3%81%A6%E5%89%8A%E9%99%A4" aria-hidden="true"><span class="octicon octicon-link"></span></a>不要なリソースを全て削除</h3>
+<ul>
+  <li>
+    <h4 id="docker-system-prune">
+<a class="anchor" href="#docker-system-prune" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>docker <code class="language-plaintext highlighter-rouge">system prune</code></strong>
+</h4>
+    <p>停止中のコンテナやdanglingなイメージなど不要なリソースを全て削除します。</p>
+  </li>
+</ul>
+
+<hr>
+<h2 id="dockerイメージ">
+<a class="anchor" href="#docker%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Dockerイメージ</strong>
+</h2>
+<h3 id="dockerイメージの作成docker-build">
+<a class="anchor" href="#docker%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8%E3%81%AE%E4%BD%9C%E6%88%90docker-build" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dockerイメージの作成：<strong><code class="language-plaintext highlighter-rouge">docker build</code></strong>
+</h3>
+<ul>
+  <li>
+    <h4 id="docker-build--t-foo-">
+<a class="anchor" href="#docker-build--t-foo-" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>docker build <code class="language-plaintext highlighter-rouge">-t foo .</code></strong>
+</h4>
+    <p>現在のディレクトリにあるDockerfileという名前のDockerfileから<code class="language-plaintext highlighter-rouge">foo</code>というコンテナのイメージを作成します。</p>
+  </li>
+</ul>
+
+<h3 id="dockerイメージの一覧を表示docker-images">
+<a class="anchor" href="#docker%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8%E3%81%AE%E4%B8%80%E8%A6%A7%E3%82%92%E8%A1%A8%E7%A4%BAdocker-images" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dockerイメージの一覧を表示：<strong><code class="language-plaintext highlighter-rouge">docker images</code></strong>
+</h3>
+<ul>
+  <li>
+    <h4 id="docker-images">
+<a class="anchor" href="#docker-images" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>docker <code class="language-plaintext highlighter-rouge">images</code></strong>
+</h4>
+    <p>Docker<code class="language-plaintext highlighter-rouge">イメージの一覧</code>を表示します。</p>
+  </li>
+</ul>
+
+<h3 id="dockerイメージを削除docker-rmi">
+<a class="anchor" href="#docker%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8%E3%82%92%E5%89%8A%E9%99%A4docker-rmi" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dockerイメージを削除：<strong><code class="language-plaintext highlighter-rouge">docker rmi</code></strong>
+</h3>
+<ul>
+  <li>
+    <h4 id="docker-rmi-foo">
+<a class="anchor" href="#docker-rmi-foo" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>docker <code class="language-plaintext highlighter-rouge">rmi foo</code></strong>
+</h4>
+    <p>fooという名前のイメージを削除します。</p>
+  </li>
+  <li>
+    <h4 id="docker-rmi-docker-images--f-danglingtrue--q">
+<a class="anchor" href="#docker-rmi-docker-images--f-danglingtrue--q" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>docker <code class="language-plaintext highlighter-rouge">rmi $(docker images -f “dangling=true” -q)</code></strong>
+</h4>
+    <p>danglingなイメージを全て削除します。</p>
+  </li>
+</ul>
+
+<hr>
+<h2 id="dockerコンテナ">
+<a class="anchor" href="#docker%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Dockerコンテナ</strong>
+</h2>
+<h3 id="コンテナの作成実行docker-run">
+<a class="anchor" href="#%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A%E3%81%AE%E4%BD%9C%E6%88%90%E5%AE%9F%E8%A1%8Cdocker-run" aria-hidden="true"><span class="octicon octicon-link"></span></a>コンテナの作成・実行：<strong><code class="language-plaintext highlighter-rouge">docker run</code></strong>
+</h3>
+
+<ul>
+  <li>
+    <h4 id="docker-run-ubuntu-bindate">
+<a class="anchor" href="#docker-run-ubuntu-bindate" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>docker run ubuntu /bin/date`</strong>
+</h4>
+    <p>ubuntuのイメージをもとにコンテナを起動して、現在の日時を表示させます。</p>
+  </li>
+  <li>
+    <h4 id="docker-run--d-nginx">
+<a class="anchor" href="#docker-run--d-nginx" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>docker run <code class="language-plaintext highlighter-rouge">-d</code> nginx</strong>
+</h4>
+    <p>nginxのイメージをもとに、コンテナを<code class="language-plaintext highlighter-rouge">バックグラウンド（デーモン）</code>で起動します。</p>
+  </li>
+  <li>
+    <h4 id="docker-run--d-nginxstable">
+<a class="anchor" href="#docker-run--d-nginxstable" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>docker run -d nginx<code class="language-plaintext highlighter-rouge">:stable</code></strong>
+</h4>
+    <p>nginxの<code class="language-plaintext highlighter-rouge">stableイメージ</code>をもとに、コンテナをバックグラウンドで起動します。stableなどタグ指定のないときにlatestイメージが利用されます。</p>
+  </li>
+  <li>
+    <h4 id="docker-run--d---name-foo-nginx">
+<a class="anchor" href="#docker-run--d---name-foo-nginx" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>docker run -d <code class="language-plaintext highlighter-rouge">--name foo</code> nginx</strong>
+</h4>
+    <p>Nginxのイメージをもとに、<code class="language-plaintext highlighter-rouge">fooという名前</code>のコンテナをバックグラウンドで起動します。</p>
+  </li>
+  <li>
+    <h4 id="docker-run--d--p-808080-name-web-nginxstable">
+<a class="anchor" href="#docker-run--d--p-808080-name-web-nginxstable" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>docker run -d <code class="language-plaintext highlighter-rouge">-p 8080:80</code> –name web nginx:stable`</strong>
+</h4>
+    <p>Nginxのstableイメージをもとに、webという名前のコンテナをバックグラウンドで起動し、<code class="language-plaintext highlighter-rouge">ホストPC localhostの8080ポート宛のアクセスを、コンテナの80ポートに転送</code>します。</p>
+  </li>
+</ul>
+
+<h3 id="稼働中のコンテナでコマンド実行docker-exec">
+<a class="anchor" href="#%E7%A8%BC%E5%83%8D%E4%B8%AD%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A%E3%81%A7%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E5%AE%9F%E8%A1%8Cdocker-exec" aria-hidden="true"><span class="octicon octicon-link"></span></a>稼働中のコンテナでコマンド実行：<strong><code class="language-plaintext highlighter-rouge">docker exec</code></strong>
+</h3>
+<ul>
+  <li>
+    <h4 id="docker-exec-web-binls">
+<a class="anchor" href="#docker-exec-web-binls" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>docker exec web <code class="language-plaintext highlighter-rouge">/bin/ls</code></strong>
+</h4>
+    <p>webという名前の稼働中のコンテナにコマンドを実行して<code class="language-plaintext highlighter-rouge">ディレクトリ・ファイル一覧を表示</code>します。</p>
+  </li>
+  <li>
+    <h4 id="docker-exec--it-web-binbash">
+<a class="anchor" href="#docker-exec--it-web-binbash" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>docker exec <code class="language-plaintext highlighter-rouge">-it</code> web <code class="language-plaintext highlighter-rouge">/bin/bash</code></strong>
+</h4>
+    <p>webという名前の稼働中の<code class="language-plaintext highlighter-rouge">コンテナにログイン</code>します。</p>
+  </li>
+</ul>
+
+<h3 id="ログの取得docker-logs">
+<a class="anchor" href="#%E3%83%AD%E3%82%B0%E3%81%AE%E5%8F%96%E5%BE%97docker-logs" aria-hidden="true"><span class="octicon octicon-link"></span></a>ログの取得：<strong><code class="language-plaintext highlighter-rouge">docker logs</code></strong>
+</h3>
+<ul>
+  <li>
+    <h4 id="docker-logs-web">
+<a class="anchor" href="#docker-logs-web" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>docker logs <code class="language-plaintext highlighter-rouge">web</code></strong>
+</h4>
+    <p><code class="language-plaintext highlighter-rouge">web</code>というコンテナ名のコンテナの<code class="language-plaintext highlighter-rouge">ログを取得</code>します。</p>
+  </li>
+</ul>
+
+<h3 id="稼働中のコンテナ一覧を表示docker-ps">
+<a class="anchor" href="#%E7%A8%BC%E5%83%8D%E4%B8%AD%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A%E4%B8%80%E8%A6%A7%E3%82%92%E8%A1%A8%E7%A4%BAdocker-ps" aria-hidden="true"><span class="octicon octicon-link"></span></a>稼働中のコンテナ一覧を表示：<strong><code class="language-plaintext highlighter-rouge">docker ps</code></strong>
+</h3>
+<ul>
+  <li>
+    <h4 id="docker-ps">
+<a class="anchor" href="#docker-ps" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>docker <code class="language-plaintext highlighter-rouge">ps</code></strong>
+</h4>
+    <p>稼働中のコンテナの一覧を表示します。</p>
+  </li>
+  <li>
+    <h4 id="docker-ps--a">
+<a class="anchor" href="#docker-ps--a" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>docker <code class="language-plaintext highlighter-rouge">ps -a</code></strong>
+</h4>
+    <p>停止中のコンテナも含めて全てのコンテナの一覧を表示します。</p>
+  </li>
+</ul>
+
+<h3 id="稼働中のコンテナを停止docker-stop">
+<a class="anchor" href="#%E7%A8%BC%E5%83%8D%E4%B8%AD%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A%E3%82%92%E5%81%9C%E6%AD%A2docker-stop" aria-hidden="true"><span class="octicon octicon-link"></span></a>稼働中のコンテナを停止：<strong><code class="language-plaintext highlighter-rouge">docker stop</code></strong>
+</h3>
+<ul>
+  <li>
+    <h4 id="docker-stop-web">
+<a class="anchor" href="#docker-stop-web" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>docker <code class="language-plaintext highlighter-rouge">stop web</code></strong>
+</h4>
+    <p>webという名前の稼働中のコンテナを停止します。</p>
+  </li>
+  <li>
+    <h4 id="docker-stop-docker-ps--q">
+<a class="anchor" href="#docker-stop-docker-ps--q" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>docker stop <code class="language-plaintext highlighter-rouge">$(docker ps -q)</code></strong>
+</h4>
+    <p>稼働中のコンテナを全て停止します。</p>
+  </li>
+</ul>
+
+<h3 id="停止中のコンテナを開始docker-start">
+<a class="anchor" href="#%E5%81%9C%E6%AD%A2%E4%B8%AD%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A%E3%82%92%E9%96%8B%E5%A7%8Bdocker-start" aria-hidden="true"><span class="octicon octicon-link"></span></a>停止中のコンテナを開始：<strong><code class="language-plaintext highlighter-rouge">docker start</code></strong>
+</h3>
+<ul>
+  <li>
+    <h4 id="docker-start-web">
+<a class="anchor" href="#docker-start-web" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>docker <code class="language-plaintext highlighter-rouge">start web</code></strong>
+</h4>
+    <p>webという名前のコンテナを再開します。</p>
+  </li>
+</ul>
+
+<h3 id="稼働中のコンテナを再開">
+<a class="anchor" href="#%E7%A8%BC%E5%83%8D%E4%B8%AD%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A%E3%82%92%E5%86%8D%E9%96%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>稼働中のコンテナを再開</h3>
+<ul>
+  <li>
+    <h4 id="docker-restart-web">
+<a class="anchor" href="#docker-restart-web" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>docker <code class="language-plaintext highlighter-rouge">restart web</code></strong>
+</h4>
+    <p>webという名前のコンテナを再開します。</p>
+  </li>
+</ul>
+
+<h3 id="停止中のコンテナを削除docker-rm">
+<a class="anchor" href="#%E5%81%9C%E6%AD%A2%E4%B8%AD%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A%E3%82%92%E5%89%8A%E9%99%A4docker-rm" aria-hidden="true"><span class="octicon octicon-link"></span></a>停止中のコンテナを削除：<strong><code class="language-plaintext highlighter-rouge">docker rm</code></strong>
+</h3>
+<ul>
+  <li>
+    <h4 id="docker-rm-web">
+<a class="anchor" href="#docker-rm-web" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>docker <code class="language-plaintext highlighter-rouge">rm web</code></strong>
+</h4>
+    <p>停止中のwebというコンテナを削除します。</p>
+  </li>
+  <li>
+    <h4 id="docker-rm-docker-ps--aq">
+<a class="anchor" href="#docker-rm-docker-ps--aq" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>docker <code class="language-plaintext highlighter-rouge">rm $(docker ps -aq)</code></strong>
+</h4>
+    <p>停止中コンテナを全て削除します。</p>
+  </li>
+</ul>
+
+
+  </div><a class="u-url" href="/topics/markdown/2020/01/15/%E3%82%88%E3%81%8F%E4%BD%BF%E3%81%86Docker%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E4%B8%80%E8%A6%A7.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/topics/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/topics/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/topics/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Short notes on technology and trends.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/mesbah-uddin" title="mesbah-uddin"><svg class="svg-icon grey"><use xlink:href="/topics/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/MesbahUddin" title="MesbahUddin"><svg class="svg-icon grey"><use xlink:href="/topics/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
