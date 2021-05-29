@@ -40,7 +40,7 @@
   
       ,"page1": {
           "title": "About Me",
-          "content": "This website is powered by fastpages 1. . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
+          "content": "This website is powered by fastpages 1. . This site is built with fastpages, An easy to use blogging platform with extra features for Jupyter Notebooks. . . fastpages automates the process of creating blog posts via GitHub Actions, so you don’t have to fuss with conversion scripts. A full list of features can be found on GitHub. . You can edit the index.html file to change this content. . Posts . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
           "url": "https://mesbah-uddin.github.io/topics/about/",
           "relUrl": "/about/",
           "date": ""
