@@ -97,24 +97,24 @@ window.onload = wrap_img;
 
 <hr />
 <h2 id="docker本体用コマンド"><strong>Docker本体用コマンド</strong></h2>
-<h3 id="docker-systemでdocker本体を管理">docker systemでDocker本体を管理</h3>
+<h3 id="docker-systemでdocker本体を管理"><strong>docker systemでDocker本体を管理</strong></h3>
 <ul>
   <li>停止中のコンテナやdanglingなイメージなど不要なリソースを全て削除します。
     <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker system prune
 </code></pre></div>    </div>
     <hr />
     <h2 id="dockerイメージ用コマンド"><strong>Dockerイメージ用コマンド</strong></h2>
-    <h3 id="docker-buildでdockerイメージを作成">docker buildでDockerイメージを作成</h3>
+    <h3 id="docker-buildでdockerイメージを作成"><strong>docker buildでDockerイメージを作成</strong></h3>
   </li>
   <li>現在のディレクトリにあるDockerfileという名前のDockerfileからfooというコンテナのイメージを作成します。
     <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build <span class="nt">-t</span> foo <span class="nb">.</span>
 </code></pre></div>    </div>
-    <h3 id="docker-imagesでdockerイメージの一覧を表示">docker imagesでDockerイメージの一覧を表示</h3>
+    <h3 id="docker-imagesでdockerイメージの一覧を表示"><strong>docker imagesでDockerイメージの一覧を表示</strong></h3>
   </li>
   <li>Dockerイメージの一覧を表示します。
     <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker images
 </code></pre></div>    </div>
-    <h3 id="docker-rmiでdockerイメージを削除">docker rmiでDockerイメージを削除</h3>
+    <h3 id="docker-rmiでdockerイメージを削除"><strong>docker rmiでDockerイメージを削除</strong></h3>
   </li>
   <li>fooという名前のイメージを削除します。
     <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker rmi foo
@@ -128,7 +128,7 @@ window.onload = wrap_img;
 
 <hr />
 <h2 id="dockerコンテナ用コマンド"><strong>Dockerコンテナ用コマンド</strong></h2>
-<h3 id="docker-runでコンテナを作成実行">docker runでコンテナを作成（実行）</h3>
+<h3 id="docker-runでコンテナを作成実行"><strong>docker runでコンテナを作成（実行）</strong></h3>
 <ul>
   <li>ubuntuのイメージをもとにコンテナを起動して、現在の日時を表示させます。
     <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run ubuntu /bin/date
@@ -149,7 +149,7 @@ window.onload = wrap_img;
   <li>nginxのstableイメージをもとに、webという名前のコンテナをバックグラウンドで起動し、ホストPC localhostの8080ポート宛のアクセスを、コンテナの80ポートに転送します。
     <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">-d</span> <span class="nt">-p</span> 8080:80 <span class="nt">--name</span> web nginx:stable
 </code></pre></div>    </div>
-    <h3 id="docker-execで稼働中のコンテナでコマンドを実行">docker execで稼働中のコンテナでコマンドを実行</h3>
+    <h3 id="docker-execで稼働中のコンテナでコマンドを実行"><strong>docker execで稼働中のコンテナでコマンドを実行</strong></h3>
   </li>
   <li>webという名前の稼働中のコンテナにコマンドを実行してディレクトリ・ファイル一覧を表示します。
     <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker <span class="nb">exec </span>web /bin/ls
@@ -158,12 +158,12 @@ window.onload = wrap_img;
   <li>webという名前の稼働中のコンテナにログインします。
     <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker <span class="nb">exec</span> <span class="nt">-it</span> web /bin/bash
 </code></pre></div>    </div>
-    <h3 id="docker-logsでログを取得">docker logsでログを取得</h3>
+    <h3 id="docker-logsでログを取得"><strong>docker logsでログを取得</strong></h3>
   </li>
   <li>webというコンテナ名のコンテナのログを取得します。
     <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker logs web
 </code></pre></div>    </div>
-    <h3 id="docker-psで稼働中のコンテナ一覧を表示">docker psで稼働中のコンテナ一覧を表示</h3>
+    <h3 id="docker-psで稼働中のコンテナ一覧を表示"><strong>docker psで稼働中のコンテナ一覧を表示</strong></h3>
   </li>
   <li>稼働中のコンテナの一覧を表示します。
     <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker ps
@@ -172,7 +172,7 @@ window.onload = wrap_img;
   <li>停止中のコンテナも含めて全てのコンテナの一覧を表示します。
     <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker ps <span class="nt">-a</span>
 </code></pre></div>    </div>
-    <h3 id="docker-stopで稼働中のコンテナを停止">docker stopで稼働中のコンテナを停止</h3>
+    <h3 id="docker-stopで稼働中のコンテナを停止"><strong>docker stopで稼働中のコンテナを停止</strong></h3>
   </li>
   <li>webという名前の稼働中のコンテナを停止します。
     <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker stop web
@@ -181,17 +181,17 @@ window.onload = wrap_img;
   <li>稼働中のコンテナを全て停止します。
     <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker stop <span class="si">$(</span>docker ps <span class="nt">-q</span><span class="si">)</span>
 </code></pre></div>    </div>
-    <h3 id="docker-startで停止中のコンテナを開始">docker startで停止中のコンテナを開始</h3>
+    <h3 id="docker-startで停止中のコンテナを開始"><strong>docker startで停止中のコンテナを開始</strong></h3>
   </li>
   <li>webという名前のコンテナを再開します。
     <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker start web
 </code></pre></div>    </div>
-    <h3 id="docker-restartで稼働中のコンテナを再開">docker restartで稼働中のコンテナを再開</h3>
+    <h3 id="docker-restartで稼働中のコンテナを再開"><strong>docker restartで稼働中のコンテナを再開</strong></h3>
   </li>
   <li>webという名前のコンテナを再開します。
     <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker restart web
 </code></pre></div>    </div>
-    <h3 id="docker-rmで停止中のコンテナを削除">docker rmで停止中のコンテナを削除</h3>
+    <h3 id="docker-rmで停止中のコンテナを削除"><strong>docker rmで停止中のコンテナを削除</strong></h3>
   </li>
   <li>停止中のwebというコンテナを削除します。
     <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker <span class="nb">rm </span>web
