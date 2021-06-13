@@ -22,17 +22,6 @@
         
     
   
-    
-        ,"post2": {
-            "title": "Python電卓",
-            "content": "12980 * 0.3 . 3894.0 . 上のコードで既に気づいていると思いますが、元値段に対して3割=0.3のかけ算をしているだけです。 . この*は、かけ算をしてくれるオペレーター（代数演算子）です。 . では、割引後の価格はいくらになるのでしょうか？元値段から割引額を引いてから実行してみましょう： . 12980 - 12980 * 0.3 . 9086.0 . 実際に支払いのときに、この価格に10%の消費税が上乗せされますので、足してみます： . 9086.0 + 9086.0 * 0.1 . 9994.6 . ただ、実際には1円未満を支払うことができないので、切り捨てます。 Pythonで書くとこうなります： . 9086.0 + 9086.0 * 0.1 // 1 # 代わりに 9086.0 * 1.1 // 1 でもOK . 9994.0 . 上のコードでは# に続く割引額はコメントです。コメントは計算実行の時に無視されます。 . また、途中結果を() 括弧を使ってまとまることもできます： . (12980 - 12980 * 0.3) * 1.1 // 1 . 9994.0 . &#28436;&#31639;&#12398;&#31278;&#39006;&#12392;&#38918;&#20301; . Pythonでは、下記表の通り代数演算子を使って演算ができます。 . 演算 使う代数演算子 . 足し算 | + | . 引き算 | - | . かけ算 | * | . 除算 | / | . 切り捨て除算 | // | . 剰余算 | % | . べき乗 | ** | . 演算子には実行する優先順位があって、(　)、べき乗、掛け算、割り算、足し算、引き算の順序で処理されます。 . 上のコード文の括弧を取り除いてみてみましょう。 . 12980 - 12980 * 0.3 * 1.1 // 1 . 8697.0 . この場合、かけ算の優先順位が高いため、12980 * 0.3 * 1.1の部分が先に実行されます。 . その後、// 1の部分での1円未満の切り捨てられ、最後に12980から引き算の部分が処理されます。 . これでは正し結果がえられるのでしょうか？ . 消費税込みの価格を得るための1.1がけは割引後の価格に対してすべきです。 . 優先順位の最も高い()括弧で引後の価格を先に処理され利用にまとめてあげることで正しい結果を得るようになります。 . (12980 - 12980 * 0.3) * 1.1 // 1 . 9994.0 . &#32080;&#26524;&#12398;&#34920;&#31034; . 続けて計算をしているときに、結果を分かりやすく表示するためにprint機能が使えます。 . printの後ろの()の中に表示したいものを入れると、その内容が画面上に表示されます。 . 文字列を表示させるためには、&#39; &#39; または &quot; &quot; で囲みます。 . print(&#39;元値段： &#39;, 12980, &#39;円&#39;) print(&#39;割引額： &#39;, 12980 * 0.3, &#39;円&#39;, &#39;(割引率：&#39;, 30, &#39;%)&#39;) print(&#39;割引後の値段：&#39;, 12980 - 12980 * 0.3, &#39;円&#39;) print(&#39;消費税： &#39;, (12980 - 12980 * 0.3) * 0.1 // 1, &#39;円&#39;) print(&#39;税込価格：　　&#39;, (12980 - 12980 * 0.3) * 1.1 // 1, &#39;円&#39;) . 元値段： 12980 円 割引額： 3894.0 円 (割引率： 30 %) 割引後の値段： 9086.0 円 消費税： 908.0 円 税込価格：　　 9994.0 円 . &#32244;&#32722;&#21839;&#38988; . 異なる元値段と割引率で、割引後の支払額をPythonコードで求めてみよ。 | 別の演算例を考え、Pythonコードでその計算を試してみよ。 |",
-            "url": "https://mesbah-uddin.github.io/topics/2018/07/01/python-as-a-calculator-ja.html",
-            "relUrl": "/2018/07/01/python-as-a-calculator-ja.html",
-            "date": " • Jul 1, 2018"
-        }
-        
-    
-  
 
   
   
@@ -40,7 +29,7 @@
   
       ,"page1": {
           "title": "About Me",
-          "content": "This website is powered by fastpages 1. . This site is built with fastpages, An easy to use blogging platform with extra features for Jupyter Notebooks. . . fastpages automates the process of creating blog posts via GitHub Actions, so you don’t have to fuss with conversion scripts. A full list of features can be found on GitHub. . You can edit the index.html file to change this content. . Posts . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
+          "content": "This website is powered by fastpages 1. . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
           "url": "https://mesbah-uddin.github.io/topics/about/",
           "relUrl": "/about/",
           "date": ""
